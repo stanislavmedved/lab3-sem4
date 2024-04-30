@@ -2,6 +2,7 @@
 #include "Cylinder.h"
 #include "Sphere.h"
 #include "Square.h"
+#include "Triangle.h"
 #include <clocale>
 #include <cstdio>
 int main() {
@@ -63,7 +64,18 @@ int main() {
 }
   printf("===================\n");
   // треугольник
-{}
+{
+  Triangle trig1 = Triangle(1.0f, 1.0f);
+  Triangle trig2 = Triangle(2.0f, 2.0f);
+  printf("%s\n", trig1.getName().c_str());
+  trig1.showInfo();
+  trig2.showInfo();
+  printf("A > B: %s\n", (trig1 > trig2 ? "true" : "false"));
+  printf("A < B: %s\n", (trig1 < trig2 ? "true" : "false"));
+  printf("A == B: %s\n", (trig1 == trig2 ? "true" : "false"));
+  trig1.scale(2.0f);
+  trig2.showInfo();
+}
   printf("===================\n");
   // пирамида
 {}

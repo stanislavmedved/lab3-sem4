@@ -7,6 +7,7 @@ void Circle::calculateArea(){
 
 void Circle::scale(float scaleFactor){
     this->radius *= scaleFactor;
+    this->calculateArea();
 }
 
 void Circle::showInfo(){

@@ -11,6 +11,7 @@ Square::Square(float _side): side(_side) {
 
 void Square::scale(float scaleFactor){
     this->side *= scaleFactor;
+    this->calculateArea();
 }
 void Square::showInfo(){
     printf(

@@ -10,6 +10,7 @@ Sphere::Sphere(float rad): radius(rad){
 
 void Sphere::scale(float scaleFactor){
     this->radius *= scaleFactor;
+    calculateVolume();
 }
 void Sphere::showInfo(){
     printf("Я сфера!\n"
