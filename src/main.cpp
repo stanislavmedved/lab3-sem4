@@ -1,10 +1,10 @@
 #include "Circle.h"
 #include "Cylinder.h"
+#include "Sphere.h"
 #include <clocale>
 #include <cstdio>
 int main() {
   setlocale(LC_ALL, "utf-8");
-  printf("## ЛАБОРАТОРНАЯ 3\nВыполнил Медведь С.К.\nИУСбд-01-22\n\n");
 // круг
 {
   Circle circleA = Circle(1.0f);
@@ -33,9 +33,28 @@ int main() {
   cyl1.showInfo();
 }
   printf("===================\n");
+  // сфера
 {
-
+  Sphere sphere1 = Sphere(1.0f);
+  Sphere sphere2 = Sphere(2.0f);
+  printf("%s\n", sphere1.getName().c_str());
+  sphere1.showInfo();
+  sphere2.showInfo();
+  printf("A > B: %s\n", (sphere1 > sphere2 ? "true" : "false"));
+  printf("A < B: %s\n", (sphere1 < sphere2 ? "true" : "false"));
+  printf("A == B: %s\n", (sphere1 == sphere2 ? "true" : "false"));
+  sphere1.scale(2.0f);
+  sphere1.showInfo();
 }
-
+  printf("===================\n");
+  // квадрат
+{}
+  printf("===================\n");
+  // треугольник
+{}
+  printf("===================\n");
+  // пирамида
+{}
+  
   return 0;
 }
