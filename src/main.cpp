@@ -3,6 +3,7 @@
 #include "Sphere.h"
 #include "Square.h"
 #include "Triangle.h"
+#include "TriangularPyramid.h"
 #include <clocale>
 #include <cstdio>
 int main() {
@@ -74,11 +75,22 @@ int main() {
   printf("A < B: %s\n", (trig1 < trig2 ? "true" : "false"));
   printf("A == B: %s\n", (trig1 == trig2 ? "true" : "false"));
   trig1.scale(2.0f);
-  trig2.showInfo();
+  trig1.showInfo();
 }
   printf("===================\n");
   // пирамида
-{}
+{
+  TriangularPyramid pyramid1 = TriangularPyramid(Triangle(1.0f, 1.0f), 1.0f);
+  TriangularPyramid pyramid2 = TriangularPyramid(Triangle(2.0f, 2.0f), 2.0f);
+  printf("%s\n", pyramid1.getName().c_str());
+  pyramid1.showInfo();
+  pyramid2.showInfo();
+  printf("A > B: %s\n", (pyramid1 > pyramid2 ? "true" : "false"));
+  printf("A < B: %s\n", (pyramid1 < pyramid2 ? "true" : "false"));
+  printf("A == B: %s\n", (pyramid1 == pyramid2 ? "true" : "false"));
+  pyramid1.scale(2.0f);
+  pyramid1.showInfo();
+}
   
   return 0;
 }

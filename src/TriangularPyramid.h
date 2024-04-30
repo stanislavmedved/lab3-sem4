@@ -3,13 +3,13 @@
 #include "Shape3D.h"
 #include "Triangle.h"
 #include <string>
-class TriangularPyramid : Shape3D {
+class TriangularPyramid : public Shape3D {
 private:
-  float height;
   Triangle base;
+  float height;
   void calculateVolume() override;
 public:
-  TriangularPyramid();
+  TriangularPyramid(Triangle _base, float _height);
   
   void scale(float scaleFactor) override;
   void showInfo() override;

@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <string>
 void Square::calculateArea(){
-    this->area = side * side;
+    area = side * side;
 }
 
 Square::Square(float _side): side(_side) {
@@ -10,7 +10,7 @@ Square::Square(float _side): side(_side) {
 }
 
 void Square::scale(float scaleFactor){
-    this->side *= scaleFactor;
+    side *= scaleFactor;
     this->calculateArea();
 }
 void Square::showInfo(){
