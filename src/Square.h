@@ -2,7 +2,7 @@
 #define SQUARE
 #include "Shape2D.h"
 #include <string>
-class Square : Shape2D {
+class Square : public Shape2D {
 private:
   float side;
   void calculateArea() override;
@@ -10,8 +10,8 @@ private:
 public:
   Square(float _side);
 
-  //void scale(float scaleFactor) override;
-  //void showInfo() override;
-  //std::string getName() override;
+  void scale(float scaleFactor) override;
+  void showInfo() override;
+  std::string getName() override;
 };
 #endif

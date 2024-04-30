@@ -1,6 +1,7 @@
 #include "Circle.h"
 #include "Cylinder.h"
 #include "Sphere.h"
+#include "Square.h"
 #include <clocale>
 #include <cstdio>
 int main() {
@@ -48,7 +49,18 @@ int main() {
 }
   printf("===================\n");
   // квадрат
-{}
+{
+  Square square1 = Square(1.0f);
+  Square square2 = Square(2.0f);
+  printf("%s\n", square1.getName().c_str());
+  square1.showInfo();
+  square2.showInfo();
+  printf("A > B: %s\n", (square1 > square2 ? "true" : "false"));
+  printf("A < B: %s\n", (square1 < square2 ? "true" : "false"));
+  printf("A == B: %s\n", (square1 == square2 ? "true" : "false"));
+  square1.scale(2.0f);
+  square1.showInfo();
+}
   printf("===================\n");
   // треугольник
 {}
