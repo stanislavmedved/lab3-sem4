@@ -2,13 +2,13 @@
 #define CIRCLE
 #include "Shape2D.h"
 #include <string>
-class Circle : Shape2D {
+class Circle : public Shape2D {
 private:
   float radius;
   void calculateArea() override;
 
 public:
-  Circle();
+  explicit Circle(float rad);
   void scale(float scaleFactor) override;
   void showInfo() override;
   std::string getName() override;

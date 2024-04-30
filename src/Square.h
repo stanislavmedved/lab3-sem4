@@ -8,10 +8,10 @@ private:
   void calculateArea() override;
 
 public:
-  Square();
+  Square(float _side);
 
-  void scale(float scaleFactor) override;
-  void showInfo() override;
-  std::string getName() override;
+  //void scale(float scaleFactor) override;
+  //void showInfo() override;
+  //std::string getName() override;
 };
 #endif

@@ -1,12 +1,11 @@
 #ifndef SHAPE2D
 #define SHAPE2D
 #include "Shape.h"
-class Shape2D : Shape {
+class Shape2D : public Shape {
 private:
+  void virtual calculateArea() = 0;
+protected:
   float area;
-
-  void virtual calculateArea();
-
 public:
   float getArea();
   bool operator>(const Shape2D &other) const;

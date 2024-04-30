@@ -1,13 +1,16 @@
-#ifndef SPHERE
-#define SPHERE
+#ifndef CYLINDER
+#define CYLINDER
+#include "Circle.h"
 #include "Shape3D.h"
-class Sphere: Shape3D{
+#include <string>
+class Cylinder : public Shape3D {
 private:
-  float radius;
+  float height;
+  Circle base;
   void calculateVolume() override;
 
 public:
-  Sphere();
+  Cylinder(float _radius, float _height);
   void scale(float scaleFactor) override;
   void showInfo() override;
   std::string getName() override;

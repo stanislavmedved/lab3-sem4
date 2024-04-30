@@ -1,10 +1,11 @@
 #ifndef SHAPE3D
 #define SHAPE3D
 #include "Shape.h"
-class Shape3D : Shape {
+class Shape3D : public Shape {
 private:
+  void virtual calculateVolume() = 0;
+protected:
   float volume;
-  void virtual calculateVolume();
 public:
   float getVolume();
   bool operator>(const Shape3D& other) const;
